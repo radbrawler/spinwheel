@@ -24,8 +24,18 @@ export default function HomePage() {
         '#EC3F3F',
         '#FF9000'
     ]
+    var winners = []
     const onFinished = (winner) => {
         console.log(winner)
+        let winners_str = localStorage.getItem("winners")
+        
+        
+        if (winners_str != null) {
+            winners = JSON.parse(winners_str)
+        }
+        winners.push(winner)
+        console.log(winners)
+        localStorage.setItem("winners", JSON.stringify(winners))
     }
 
     return (
@@ -47,6 +57,9 @@ export default function HomePage() {
                 downDuration={100}
                 fontFamily='Arial'
             />
+            {/* <ol>
+               {this.winners.map((win, idx) => <li key={idx}>{win}</li>)}
+            </ol> */}
             
         </div>
     )
