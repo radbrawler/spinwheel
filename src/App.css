@@ -59,12 +59,12 @@ body {
 }
 
 #reg_btn:hover span {
-  padding-right: 25px;
+    padding-right: 25px;
 }
 
 #reg_btn:hover span:after {
-  opacity: 1;
-  right: 0;
+    opacity: 1;
+    right: 0;
 }
 
 /***    Login Page     ***/
@@ -137,4 +137,10 @@ form span {
 /***    Home Page     ***/
 .home-page-title {
     color: #222
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
 }
